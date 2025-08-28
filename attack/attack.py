@@ -1,13 +1,10 @@
 import datetime
 import os
-import sys
 import time
-
 import pandas as pd
 import torch
 import torchvision.transforms.functional as TF
 from torch.utils.data import DataLoader
-
 from .data.data_load import attackDataset, evalDataset
 from .model.func import models_mapping
 class ATTACK(object):
@@ -38,13 +35,6 @@ class ATTACK(object):
         parser.add_argument(
             "--data_type", type=str, default="MTARSI", help="used trainset in training"
         )
-        # parser.add_argument(
-        #     "--model_type",
-        #     type=str,
-        #     default="resnet34",
-        #     #densenet121#inception_resv2
-        #     help="used trainset in training",
-        # )
         parser.add_argument(
             "--data_dir", type=str, default="./dataset", help="path of the dataset"
         )

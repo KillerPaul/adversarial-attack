@@ -1,3 +1,4 @@
+#init
 from .attack import ATTACK
 from .data.data_load import attackDataset, evalDataset, get_images_lists, trainDataset
 from .transfer_attack.admix import ADMIX
