@@ -2,6 +2,7 @@ import os
 import shutil
 from sklearn.model_selection import train_test_split
 
+
 # 数据集文件夹路径
 data_dir = r"C:\Users\Admin\Desktop\SFCoT-main\dataset\FGSCR_42"
 
