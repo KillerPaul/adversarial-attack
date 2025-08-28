@@ -1,25 +1,26 @@
 import argparse
 
-import rsiattack
+import attack
 
 attacks_box = {
-    "admix": rsiattack.ADMIX,
-    "bsr": rsiattack.BSR,
-    "di2fgsm": rsiattack.DI2_FGSM,
-    "ifgsm": rsiattack.I_FGSM,
-    "mifgsm": rsiattack.MI_FGSM,
-    "pgd": rsiattack.PGD,
-    "pifgsm": rsiattack.PI_FGSM,
-    "sifgsm": rsiattack.SI_FGSM,
-    "ssa": rsiattack.SSA,
-    "tifgsm": rsiattack.TI_FGSM,
-    "sfcot": rsiattack.SFCoT,
+    "admix": attack.ADMIX,
+    "bsr": attack.BSR,
+    "di2fgsm": attack.DI2_FGSM,
+    "ifgsm": attack.I_FGSM,
+    "mifgsm": attack.MI_FGSM,
+    "pgd": attack.PGD,
+    "pifgsm": attack.PI_FGSM,
+    "sifgsm": attack.SI_FGSM,
+    "ssa": attack.SSA,
+    "tifgsm": attack.TI_FGSM,
+    "sfcot": attack.SFCoT,
+    "cstransform": attack.CSTransform,
 }
 
 
 def rsi_runner(model_type):
     parser = argparse.ArgumentParser(description="training the models to attack")
-    parser.add_argument("--method", type=str, default="sfcot")
+    parser.add_argument("--method", type=str, default="cstransform")
     #parser.add_argument("--l", type=int, default=l)
     parser.add_argument(
     "--model_type",

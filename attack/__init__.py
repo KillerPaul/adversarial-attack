@@ -11,3 +11,4 @@ from .transfer_attack.sfcot import SFCoT
 from .transfer_attack.sifgsm import SI_FGSM
 from .transfer_attack.ssa import SSA
 from .transfer_attack.tifgsm import TI_FGSM
+from .transfer_attack.cstransform import CSTransform

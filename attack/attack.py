@@ -10,12 +10,6 @@ from torch.utils.data import DataLoader
 
 from .data.data_load import attackDataset, evalDataset
 from .model.func import models_mapping
-
-# sys.path.append("model")
-# sys.path.append(".")
-
-
-
 class ATTACK(object):
     def __init__(self, args):
         if args.data_type == "FGSCR_42":
@@ -73,7 +67,6 @@ class ATTACK(object):
             adv_imag (_tensor_): The dataset of attacked images.
         """
         device = self.args.device
-        #elf.save_new_dir='./examples\\MTARSI_resnet34_SFCoT\\2025-07-03-21-59-00'
         dataset = evalDataset(self.save_new_dir, self.args)
         loader = DataLoader(
             dataset, batch_size=self.args.batch_size, shuffle=False, num_workers=4
